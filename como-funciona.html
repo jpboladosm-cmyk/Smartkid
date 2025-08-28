@@ -1,14 +1,18 @@
+<!-- como-funciona.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cómo funciona – SmartKid (Pizarra)</title>
+  <title>Cómo funciona – SmartKid</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
-    :root{--primary:#2E7DFF;--primary-dark:#1f3c88;--muted:#6b7280;--bg:#fff;--bg-alt:#f8f9fa;--border:#e5e7eb;}
-    body{margin:0;font-family:'Poppins',sans-serif;color:#111827;background:var(--bg)}
+    :root {
+      --primary:#2E7DFF; --primary-dark:#1f3c88;
+      --muted:#6b7280; --bg:#fff; --bg-alt:#f8f9fa; --border:#e5e7eb;
+    }
+    body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:#111827}
     h1,h2,h3{font-weight:800}
     .container{max-width:1150px;margin:0 auto;padding:0 24px}
     header{background:#fff;position:sticky;top:0;z-index:50;border-bottom:1px solid var(--border)}
@@ -24,8 +28,7 @@
     .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center}
     .hero h1{color:var(--primary-dark);font-size:44px;margin:0 0 12px}
     .hero p{color:#374151;font-size:18px;line-height:1.6;margin:0 0 20px;max-width:620px}
-    .hero img{width:100%;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.12);transition:transform .3s ease}
-    .hero img:hover{transform:scale(1.03)}
+    .hero img{width:100%;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.12)}
 
     /* Timeline */
     .section{padding:60px 0}
@@ -35,9 +38,9 @@
     .step-circle{width:60px;height:60px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 12px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
     .step h3{margin:6px 0;color:var(--primary-dark)}
 
-    /* Precio Card */
+    /* Precio */
     .price-card{background:linear-gradient(135deg,#f0f6ff,#ffffff);border:2px solid var(--primary);border-radius:20px;padding:40px;max-width:650px;margin:40px auto;box-shadow:0 8px 24px rgba(0,0,0,.08);text-align:center}
-    .price-main{font-size:38px;font-weight:800;color:var(--primary-dark)}
+    .price-main{font-size:36px;font-weight:800;color:var(--primary-dark)}
     .price-list{list-style:none;padding:0;margin:22px 0;text-align:left;display:grid;gap:12px}
     .price-list li{display:flex;align-items:flex-start;gap:10px}
     .price-list i{color:#10b981;margin-top:3px}
@@ -47,9 +50,20 @@
     .trust-badges{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-top:30px}
     .badge{background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
 
+    /* Footer */
     footer{background:#f1f1f1;padding:50px 0 20px;margin-top:40px;font-size:14px;color:var(--muted)}
     .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;margin-bottom:40px}
     .footer-col h4{margin-bottom:12px;font-weight:700;color:#111}
+    .footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    .footer-col a{color:var(--muted);text-decoration:none}
+    .footer-col a:hover{color:var(--primary-dark)}
+    .footer-bottom{text-align:center;border-top:1px solid #ddd;padding-top:20px;font-size:13px}
+    .footer-bottom a{color:var(--primary);text-decoration:none;margin:0 8px}
+    .footer-bottom a:hover{text-decoration:underline}
+
+    /* WhatsApp float */
+    .whatsapp-float{position:fixed;bottom:20px;right:20px;background:var(--primary-dark);color:#fff;padding:12px 20px;border-radius:30px;display:flex;align-items:center;font-weight:600;gap:8px;box-shadow:0 4px 10px rgba(0,0,0,.2);z-index:100;text-decoration:none}
+    .whatsapp-float i{font-size:20px}
   </style>
 </head>
 <body>
@@ -85,26 +99,10 @@
   <div class="container">
     <h2 style="text-align:center;color:var(--primary-dark)">El proceso SmartKid</h2>
     <div class="timeline">
-      <div class="step">
-        <div class="step-circle">1</div>
-        <h3>Completa el formulario</h3>
-        <p>Cuéntanos curso, asignaturas y horarios. Así escogemos la mejor opción.</p>
-      </div>
-      <div class="step">
-        <div class="step-circle">2</div>
-        <h3>Recibe perfiles</h3>
-        <p>Tutores universitarios verificados, con estudios y experiencia comprobada.</p>
-      </div>
-      <div class="step">
-        <div class="step-circle">3</div>
-        <h3>Coordina con tu tutor</h3>
-        <p>Define horarios, objetivos y plan de trabajo directamente.</p>
-      </div>
-      <div class="step">
-        <div class="step-circle">4</div>
-        <h3>Clases en tu casa</h3>
-        <p>Clases siempre a domicilio en Las Condes, Vitacura o Lo Barnechea. Pago mensual al final según las horas tomadas.</p>
-      </div>
+      <div class="step"><div class="step-circle">1</div><h3>Completa el formulario</h3><p>Cuéntanos curso, asignaturas y horarios. Así escogemos la mejor opción.</p></div>
+      <div class="step"><div class="step-circle">2</div><h3>Recibe perfiles</h3><p>Tutores universitarios verificados, con estudios y experiencia comprobada.</p></div>
+      <div class="step"><div class="step-circle">3</div><h3>Coordina con tu tutor</h3><p>Define horarios, objetivos y plan de trabajo directamente.</p></div>
+      <div class="step"><div class="step-circle">4</div><h3>Clases en tu casa</h3><p>Clases siempre a domicilio en Las Condes, Vitacura o Lo Barnechea. Pago mensual al final según horas.</p></div>
     </div>
   </div>
 </section>
@@ -114,12 +112,11 @@
     <h2 style="text-align:center;color:var(--primary-dark)">Precio transparente</h2>
     <div class="price-card">
       <div class="price-main">CLP $23.000 / hora</div>
-      <div class="price-sub">Sin matrícula ni cargos ocultos.</div>
       <ul class="price-list">
         <li><i class="fa fa-check"></i> Clases personalizadas 1 a 1 con tutores universitarios verificados</li>
-        <li><i class="fa fa-check"></i> Modalidad exclusivamente a domicilio (Las Condes, Vitacura, Lo Barnechea)</li>
+        <li><i class="fa fa-check"></i> Exclusivamente a domicilio (Las Condes, Vitacura, Lo Barnechea)</li>
         <li><i class="fa fa-check"></i> Seguimiento continuo y flexibilidad en horarios</li>
-        <li><i class="fa fa-check"></i> Cambio de tutor sin costo en caso de no haber match</li>
+        <li><i class="fa fa-check"></i> Cambio de tutor sin costo si no hay match</li>
       </ul>
       <a class="cta" href="solicita.html">Solicitar mi tutor</a>
     </div>
@@ -132,8 +129,8 @@
     <p>La tranquilidad de tu familia es lo más importante. Estos son nuestros pilares:</p>
     <div class="trust-badges">
       <div class="badge"><i class="fa fa-lock"></i><h4>Perfiles verificados</h4><p>Validamos identidad, estudios y referencias.</p></div>
-      <div class="badge"><i class="fa fa-school"></i><h4>Universidades prestigiosas</h4><p>Tutores de carreras destacadas y colegios reconocidos.</p></div>
-      <div class="badge"><i class="fa fa-language"></i><h4>Inglés e IB</h4><p>Clases en inglés y experiencia en programas IB.</p></div>
+      <div class="badge"><i class="fa fa-school"></i><h4>Universidades prestigiosas</h4><p>Tutores de carreras destacadas.</p></div>
+      <div class="badge"><i class="fa fa-language"></i><h4>Inglés e IB</h4><p>Clases en inglés y preparación IB.</p></div>
       <div class="badge"><i class="fa fa-map-marker-alt"></i><h4>En tu comuna</h4><p>Exclusivamente Las Condes, Vitacura y Lo Barnechea.</p></div>
     </div>
   </div>
@@ -171,8 +168,6 @@
       </ul>
     </div>
   </div>
-
-  <!-- Footer minimal como en la imagen -->
   <div class="footer-bottom">
     © <span id="year"></span> SmartKid SpA ·
     <a href="politica-privacidad.html">Política de Privacidad</a> ·
@@ -180,25 +175,11 @@
   </div>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+<!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/56965982941" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i> Chatea con nosotros</a>
 
-<style>
-  .footer-bottom {
-    text-align:center;
-    border-top:1px solid #ddd;
-    padding-top:20px;
-    font-size:13px;
-    color:var(--muted);
-  }
-  .footer-bottom a {
-    color:var(--primary);
-    text-decoration:none;
-    margin:0 6px;
-  }
-  .footer-bottom a:hover {
-    text-decoration:underline;
-  }
-</style>
+<script>
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
 </html>
