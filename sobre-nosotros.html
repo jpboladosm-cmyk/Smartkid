@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nosotros – SmartKid</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary:#2E7DFF; --primary-dark:#1f3c88; --muted:#6b7280;
+      --bg:#fff; --bg-alt:#f8f9fa; --border:#e5e7eb;
+    }
+    body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:#111827;line-height:1.6}
+    h1,h2,h3{font-weight:800;color:var(--primary-dark)}
+    p{color:#374151}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{background:#fff;padding:14px 0;border-bottom:1px solid var(--border)}
+    header .nav{display:flex;align-items:center;justify-content:space-between}
+
+    /* Hero estilizado */
+    .hero{background:linear-gradient(135deg,#ffffff,#e9f0ff);padding:90px 20px;text-align:center}
+    .hero-icon{font-size:64px;color:var(--primary);margin-bottom:20px;animation:bounce 3s infinite}
+    .hero h1{font-size:38px;margin-bottom:16px;color:var(--primary-dark)}
+    .hero p{max-width:720px;margin:0 auto 24px;font-size:18px;color:#374151}
+    .hero-stats{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:16px}
+    .hero-stats span{background:#fff;padding:10px 18px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.08);font-size:14px;font-weight:600;color:var(--primary-dark);display:flex;align-items:center;gap:6px}
+    @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+    section{padding:60px 0}
+    .values{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:30px}
+    .value{background:#fff;border-radius:14px;padding:24px;box-shadow:0 4px 14px rgba(0,0,0,.08);text-align:center}
+    .value i{font-size:30px;color:var(--primary);margin-bottom:12px}
+
+    .cta-section{background:var(--primary);color:#fff;text-align:center;padding:60px 20px;border-radius:16px}
+    .cta-section h2{color:#fff;margin-bottom:20px}
+    .cta-button{background:#fff;color:var(--primary-dark);padding:14px 26px;border-radius:8px;font-weight:600;text-decoration:none}
+    .cta-button:hover{background:#f1f1f1}
+
+    /* Footer */
+    footer{background:#f1f1f1;padding:50px 0 20px;margin-top:60px;font-size:14px;color:var(--muted)}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;margin-bottom:40px}
+    .footer-col h4{margin-bottom:12px;font-weight:700;color:#111}
+    .footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    .footer-col a{color:var(--muted);text-decoration:none}
+    .footer-col a:hover{color:var(--primary-dark)}
+    .footer-bottom{text-align:center;border-top:1px solid #ddd;padding-top:20px;font-size:13px}
+    .footer-bottom a{color:var(--primary);text-decoration:none;margin:0 8px}
+    .footer-bottom a:hover{text-decoration:underline}
+
+    /* WhatsApp */
+    .whatsapp-float{position:fixed;bottom:20px;right:20px;background:var(--primary-dark);color:#fff;padding:12px 20px;border-radius:30px;display:flex;align-items:center;font-weight:600;gap:8px;box-shadow:0 4px 10px rgba(0,0,0,.25);text-decoration:none}
+    .whatsapp-float i{font-size:20px}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div style="font-weight:800;font-size:22px;color:var(--primary-dark)">SmartKid</div>
+    <a href="index.html" style="text-decoration:none;color:var(--primary-dark);font-weight:600">Inicio</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-icon"><i class="fa fa-heart-pulse"></i></div>
+    <h1>Nuestra historia: la pasión por enseñar que nos unió</h1>
+    <p>Transformamos el apoyo escolar en una experiencia cercana, entretenida y segura, creando una conexión real entre tutor y estudiante.</p>
+    <div class="hero-stats">
+      <span><i class="fa fa-users"></i> +50 Tutores activos</span>
+      <span><i class="fa fa-school"></i> +100 Estudiantes apoyados</span>
+      <span><i class="fa fa-star"></i> 5 Estrellas en confianza</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Nuestra historia</h2>
+    <p>SmartKid nació de lo simple: ayudar a mi polola, que es pedagoga, a poder ganar un ingreso extra haciendo clases particulares. En cuestión de un día, ya tenía su agenda llena de alumnos gracias a recomendaciones y redes sociales.</p>
+    <p>Ese éxito espontáneo nos hizo darnos cuenta de algo importante: había una necesidad enorme de <strong>apoyo escolar accesible y confiable</strong>, y al mismo tiempo una gran oportunidad para que <strong>universitarios y universitarias obtuvieran experiencia y generaran ingresos enseñando</strong>.</p>
+  </div>
+</section>
+
+<section style="background:var(--bg-alt)">
+  <div class="container">
+    <h2>Nuestra visión</h2>
+    <p>Detectamos un match natural entre estudiantes y tutores jóvenes:</p>
+    <ul>
+      <li>👩‍🏫 Los niños se sienten más cómodos con alguien cercano a su edad.</li>
+      <li>🎒 La clase resulta más dinámica, entretenida y con mejor conexión.</li>
+      <li>📚 Los universitarios aportan frescura, conocimiento actualizado y confianza.</li>
+    </ul>
+    <p>El resultado desde el primer día fue una <strong>ganancia mutua</strong>: apoderados confiaron en un servicio seguro a un mejor precio, mientras los tutores jóvenes consiguieron experiencia y recursos extras.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Nuestros valores</h2>
+    <div class="values">
+      <div class="value"><i class="fa fa-bolt"></i><h3>Clases dinámicas</h3><p>Buscamos siempre mantener el interés y la concentración de los estudiantes.</p></div>
+      <div class="value"><i class="fa fa-handshake"></i><h3>Confianza mutua</h3><p>Un ambiente cercano, seguro y juvenil que genera conexión inmediata.</p></div>
+      <div class="value"><i class="fa fa-dollar-sign"></i><h3>Accesibilidad</h3><p>Un precio más justo y accesible que un profesor particular tradicional.</p></div>
+      <div class="value"><i class="fa fa-graduation-cap"></i><h3>Oportunidad para universitarios</h3><p>Tutores crecen enseñando, ganan experiencia y generan ingresos extras.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>¿Quieres ser parte de SmartKid?</h2>
+  <p>Si eres universitario/a con pasión por enseñar, queremos conocerte.</p>
+  <a href="mailto:redsmartkid@gmail.com" class="cta-button">Postula como tutor</a>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4>Cómo funciona</h4>
+      <ul>
+        <li><a href="como-funciona.html">Paso a paso</a></li>
+        <li><a href="como-funciona.html#precio">Precio</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Sobre nosotros</h4>
+      <ul>
+        <li><a href="sobre-nosotros.html">Quiénes somos</a></li>
+        <li><a href="sobre-nosotros.html#seguridad">Confianza & Seguridad</a></li>
+        <li><a href="sobre-nosotros.html#postula">Postula como tutor</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Blog</h4>
+      <ul>
+        <li><a href="blog.html">Consejos & Artículos</a></li>
+        <li><a href="blog.html">Blog educativo</a></li>
+        <li><a href="blog.html#partners">Partners / Auspiciadores</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <ul>
+        <li><a href="https://instagram.com/smartkidcl" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © <span id="year"></span> SmartKid SpA ·
+    <a href="politica-privacidad.html">Política de Privacidad</a> ·
+    <a href="terminos-condiciones.html">Términos y Condiciones</a>
+  </div>
+</footer>
+
+<!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/56965982941" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i> Chatea con nosotros
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
