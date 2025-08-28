@@ -1,0 +1,192 @@
+<!-- como-funciona.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo funciona – SmartKid</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--primary:#2E7DFF;--primary-dark:#1f3c88;--muted:#6b7280;--bg:#fff;--bg-alt:#f8f9fa;--border:#e5e7eb;}
+    body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);} 
+    h1,h2,h3{font-weight:800}
+    .container{max-width:1150px;margin:0 auto;padding:0 24px}
+    header{background:#fff;position:sticky;top:0;z-index:50;border-bottom:1px solid var(--border);} 
+    header .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+    header nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+    header nav a{color:var(--muted);font-weight:600;text-decoration:none}
+    header nav a:hover{color:#111}
+    .cta{background:var(--primary);color:#fff;padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none}
+    .cta:hover{background:var(--primary-dark)}
+
+    .section{padding:80px 0}
+    .hero{padding:80px 0;background:linear-gradient(135deg,#ffffff,#f1f5ff);text-align:center}
+    .hero h1{font-size:42px;color:var(--primary-dark);margin-bottom:16px}
+    .hero p{font-size:18px;color:#374151;max-width:650px;margin:0 auto}
+
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;margin-top:48px}
+    .step{background:#fff;border:1px solid var(--border);border-radius:16px;padding:30px;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,.05)}
+    .step i{font-size:32px;color:var(--primary-dark);margin-bottom:12px}
+    .step h3{margin:12px 0;color:#1f2937}
+    .step p{color:#374151;font-size:15px;line-height:1.5}
+
+    .faq{background:var(--bg-alt)}
+    .faq-item{margin-bottom:20px}
+    .faq-item h3{font-size:18px;color:var(--primary-dark);margin:0 0 8px}
+    .faq-item p{color:#374151;margin:0}
+
+    footer{background:#f1f1f1;padding:50px 0 20px;margin-top:40px;font-size:14px;color:var(--muted)}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;margin-bottom:40px}
+    .footer-col h4{margin-bottom:12px;font-weight:700;color:#111}
+    .footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    .footer-col a{color:var(--muted);text-decoration:none}
+    .footer-col a:hover{color:var(--primary-dark)}
+    .footer-bottom{text-align:center;border-top:1px solid #ddd;padding-top:20px;font-size:13px}
+    .footer-bottom a{color:var(--primary);text-decoration:none;margin:0 8px}
+    .footer-bottom a:hover{text-decoration:underline}
+
+    /* Cookie banner */
+    .cookie-banner{position:fixed;bottom:20px;left:20px;right:20px;max-width:1100px;margin:0 auto;background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.1);display:none;align-items:center;justify-content:space-between;gap:16px;z-index:1000}
+    .cookie-banner p{margin:0;font-size:14px;color:#374151}
+    .cookie-banner .cookie-actions{display:flex;gap:8px}
+    .cookie-btn{padding:8px 16px;border:1px solid var(--border);border-radius:6px;background:#fff;color:#374151;cursor:pointer;font-size:13px;font-weight:600}
+    .cookie-btn.accept{background:var(--primary);color:#fff;border-color:var(--primary)}
+    @media (max-width:640px){.cookie-banner{flex-direction:column;align-items:stretch}.cookie-actions{justify-content:flex-end}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div style="font-weight:800;font-size:22px">SmartKid</div>
+    <nav>
+      <ul>
+        <li><a href="como-funciona.html">Cómo funciona</a></li>
+        <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="solicita.html">Solicitar tutor</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>¿Cómo funciona SmartKid?</h1>
+    <p>Conecta a tu familia con un tutor universitario de confianza en pocos pasos. Nuestro proceso es simple, claro y seguro.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container steps">
+    <div class="step">
+      <i class="fas fa-user-plus"></i>
+      <h3>Paso 1</h3>
+      <p>Completa el formulario de solicitud y cuéntanos las necesidades de tu hijo.</p>
+    </div>
+    <div class="step">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <h3>Paso 2</h3>
+      <p>Te conectamos con un tutor universitario de prestigio, verificado y cercano.</p>
+    </div>
+    <div class="step">
+      <i class="fas fa-handshake"></i>
+      <h3>Paso 3</h3>
+      <p>Coordina tus clases de forma flexible en casa. Pagas al final del mes por todas las horas realizadas.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section faq">
+  <div class="container">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Las clases son presenciales?</h3>
+      <p>Sí, actualmente todas nuestras clases son presenciales en tu hogar.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Cuánto cuesta?</h3>
+      <p>El valor es de CLP $23.000 por hora, facturado al final de cada mes según uso.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué pasa si no estoy conforme?</h3>
+      <p>Puedes comunicarte con nosotros en cualquier momento y buscaremos un nuevo tutor acorde a tus expectativas.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4>Cómo funciona</h4>
+      <ul>
+        <li><a href="como-funciona.html">Paso a paso</a></li>
+        <li><a href="como-funciona.html#faq">Preguntas Frecuentes</a></li>
+        <li><a href="como-funciona.html#precio">Precio</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Sobre nosotros</h4>
+      <ul>
+        <li><a href="sobre-nosotros.html">Quiénes somos</a></li>
+        <li><a href="sobre-nosotros.html#comunidad">Nuestra comunidad</a></li>
+        <li><a href="sobre-nosotros.html#seguridad">Confianza & Seguridad</a></li>
+        <li><a href="sobre-nosotros.html#estandares">Estándares de calidad</a></li>
+        <li><a href="sobre-nosotros.html#postula">Postula como tutor</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Blog</h4>
+      <ul>
+        <li><a href="blog.html">Consejos & Artículos</a></li>
+        <li><a href="blog.html">Blog educativo</a></li>
+        <li><a href="blog.html#partners">Partners / Auspiciadores</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <ul>
+        <li><a href="https://instagram.com/smartkidcl" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © <span id="year"></span> SmartKid SpA ·
+    <a href="politica-privacidad.html">Política de Privacidad</a> ·
+    <a href="terminos-condiciones.html">Términos y Condiciones</a>
+  </div>
+</footer>
+
+<!-- Cookie consent banner -->
+<div id="cookie-banner" class="cookie-banner">
+  <p>Usamos cookies para funciones esenciales y analíticas. Al continuar, aceptas nuestra
+    <a href="politica-privacidad.html">Política de Privacidad</a>.
+  </p>
+  <div class="cookie-actions">
+    <button class="cookie-btn accept" id="accept-cookies">Aceptar</button>
+    <button class="cookie-btn" id="decline-cookies">Rechazar</button>
+  </div>
+</div>
+
+<script>
+  // Año dinámico
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  // Cookie consent
+  (function(){
+    const KEY='sk_cookie_consent_v1';
+    const saved=localStorage.getItem(KEY);
+    const banner=document.getElementById('cookie-banner');
+    if(!saved){banner.style.display='flex';}
+    document.getElementById('accept-cookies').addEventListener('click',()=>{
+      localStorage.setItem(KEY,'accepted');
+      banner.style.display='none';
+    });
+    document.getElementById('decline-cookies').addEventListener('click',()=>{
+      localStorage.setItem(KEY,'declined');
+      banner.style.display='none';
+    });
+  })();
+</script>
+</body>
+</html>
