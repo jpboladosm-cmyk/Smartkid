@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog – SmartKid</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --primary:#2E7DFF; --primary-dark:#1f3c88; --muted:#6b7280; --bg:#fff; --bg-alt:#f8f9fa; --border:#e5e7eb; }
+    body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:#111827}
+    h1,h2,h3{font-weight:800}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{background:#fff;padding:14px 0;border-bottom:1px solid var(--border)}
+    header .nav{display:flex;align-items:center;justify-content:space-between}
+
+    /* Hero */
+    .hero{background:linear-gradient(135deg,#ffffff,#e9f0ff);padding:80px 0;text-align:center}
+    .hero .icon{font-size:56px;color:var(--primary);margin-bottom:16px;animation:bounce 3s infinite}
+    .hero h1{color:var(--primary-dark);font-size:38px;margin-bottom:10px}
+    .hero p{color:#374151;max-width:760px;margin:0 auto}
+    @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+    /* Filters */
+    .filters{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:24px 0}
+    .chip{background:#fff;border:1px solid var(--border);color:#111;border-radius:999px;padding:8px 14px;font-weight:600;font-size:14px;cursor:pointer}
+    .chip.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+
+    /* Grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin:30px 0 60px}
+    .card{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 6px 16px rgba(0,0,0,.06);display:flex;flex-direction:column}
+    .thumb{width:100%;height:180px;background:#eef3ff;display:flex;align-items:center;justify-content:center}
+    .thumb img{width:100%;height:100%;object-fit:cover}
+    .content{padding:18px;display:flex;flex-direction:column;gap:8px}
+    .tag{display:inline-flex;align-items:center;gap:6px;background:#ebf3ff;color:var(--primary-dark);font-weight:700;font-size:12px;padding:6px 10px;border-radius:999px}
+    .content h3{margin:4px 0 0;color:var(--primary-dark)}
+    .content p{color:#374151;margin:0}
+    .meta{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:12px;margin-top:4px}
+    .readmore{margin-top:10px;color:#fff;background:var(--primary);text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700;align-self:flex-start}
+    .readmore:hover{background:var(--primary-dark)}
+
+    /* Footer */
+    footer{background:#f1f1f1;padding:50px 0 20px;margin-top:40px;font-size:14px;color:var(--muted)}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;margin-bottom:40px}
+    .footer-col h4{margin-bottom:12px;font-weight:700;color:#111}
+    .footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    .footer-col a{color:var(--muted);text-decoration:none}
+    .footer-col a:hover{color:var(--primary-dark)}
+    .footer-bottom{text-align:center;border-top:1px solid #ddd;padding-top:20px;font-size:13px}
+    .footer-bottom a{color:var(--primary);text-decoration:none;margin:0 8px}
+    .footer-bottom a:hover{text-decoration:underline}
+
+    /* WhatsApp */
+    .whatsapp-float{position:fixed;bottom:20px;right:20px;background:var(--primary-dark);color:#fff;padding:12px 20px;border-radius:30px;display:flex;align-items:center;font-weight:600;gap:8px;box-shadow:0 4px 10px rgba(0,0,0,.25);text-decoration:none}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div style="font-weight:800;font-size:22px;color:var(--primary-dark)">SmartKid</div>
+      <nav style="display:flex;gap:18px">
+        <a href="index.html" style="text-decoration:none;color:#374151;font-weight:600">Inicio</a>
+        <a href="como-funciona.html" style="text-decoration:none;color:#374151;font-weight:600">Cómo funciona</a>
+        <a href="sobre-nosotros.html" style="text-decoration:none;color:#374151;font-weight:600">Sobre nosotros</a>
+        <a href="blog.html" style="text-decoration:none;color:var(--primary-dark);font-weight:800">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="icon"><i class="fa fa-lightbulb"></i></div>
+      <h1>Consejos, noticias y comunidad</h1>
+      <p>Tips para el estudio, reconocimientos a tutores y novedades de SmartKid. Este es nuestro espacio vivo para compartir y aprender juntos.</p>
+      <div class="filters">
+        <span class="chip active" data-filter="all">Todos</span>
+        <span class="chip" data-filter="tips">Tips</span>
+        <span class="chip" data-filter="reconocimientos">Reconocimientos</span>
+        <span class="chip" data-filter="noticias">Noticias</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTS -->
+  <main class="container">
+    <div class="grid" id="blogGrid">
+      <!-- Post 1 -->
+      <article class="card" data-category="tips" data-date="2025-08-27">
+        <div class="thumb"><img src="https://placehold.co/800x480" alt="Consejos de concentración"/></div>
+        <div class="content">
+          <span class="tag"><i class="fa fa-wand-magic-sparkles"></i> Tips</span>
+          <h3>5 tips para mejorar la concentración en casa</h3>
+          <p>Rutinas cortas, pausas activas y un espacio sin distracciones marcan la diferencia. Te contamos cómo aplicarlo en 10 minutos.</p>
+          <div class="meta"><span><i class="fa fa-calendar"></i> 27 Ago 2025</span><span><i class="fa fa-user"></i> SmartKid</span></div>
+          <a class="readmore" href="#">Leer más</a>
+        </div>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="card" data-category="reconocimientos" data-date="2025-08-20">
+        <div class="thumb"><img src="https://placehold.co/800x480" alt="Tutora destacada"/></div>
+        <div class="content">
+          <span class="tag" style="background:#fff0e7;color:#b45309"><i class="fa fa-award"></i> Reconocimientos</span>
+          <h3>Felicitamos a Camila, tutora destacada del mes</h3>
+          <p>Por su dedicación y resultados con estudiantes de 6° básico en matemáticas. ¡Se gana una giftcard y todo nuestro aplauso! 🎉</p>
+          <div class="meta"><span><i class="fa fa-calendar"></i> 20 Ago 2025</span><span><i class="fa fa-user"></i> SmartKid</span></div>
+          <a class="readmore" href="#">Leer más</a>
+        </div>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="card" data-category="noticias" data-date="2025-08-12">
+        <div class="thumb"><img src="https://placehold.co/800x480" alt="Micro-learning"/></div>
+        <div class="content">
+          <span class="tag" style="background:#e8fff3;color:#047857"><i class="fa fa-newspaper"></i> Noticias</span>
+          <h3>Micro-learning: estudiar en bloques de 15 minutos</h3>
+          <p>Una tendencia que potencia la retención y reduce la ansiedad. Ideal para reforzar contenidos entre sesiones con tutor.</p>
+          <div class="meta"><span><i class="fa fa-calendar"></i> 12 Ago 2025</span><span><i class="fa fa-user"></i> SmartKid</span></div>
+          <a class="readmore" href="#">Leer más</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Cómo funciona</h4>
+        <ul>
+          <li><a href="como-funciona.html">Paso a paso</a></li>
+          <li><a href="como-funciona.html#precio">Precio</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sobre nosotros</h4>
+        <ul>
+          <li><a href="sobre-nosotros.html">Quiénes somos</a></li>
+          <li><a href="sobre-nosotros.html#seguridad">Confianza & Seguridad</a></li>
+          <li><a href="sobre-nosotros.html#postula">Postula como tutor</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Blog</h4>
+        <ul>
+          <li><a href="blog.html">Consejos & Artículos</a></li>
+          <li><a href="blog.html">Blog educativo</a></li>
+          <li><a href="blog.html#partners">Partners / Auspiciadores</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Síguenos</h4>
+        <ul>
+          <li><a href="https://instagram.com/smartkidcl" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="year"></span> SmartKid SpA ·
+      <a href="politica-privacidad.html">Política de Privacidad</a> ·
+      <a href="terminos-condiciones.html">Términos y Condiciones</a>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/56965982941" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i> Chatea con nosotros</a>
+
+  <script>
+    // Ordenar posts por fecha
+    const grid = document.getElementById('blogGrid');
+    [...grid.children].sort((a,b) => new Date(b.dataset.date) - new Date(a.dataset.date))
+      .forEach(el => grid.appendChild(el));
+
+    // Filtrar por categoría
+    document.querySelectorAll('.chip').forEach(chip=>{
+      chip.addEventListener('click',()=>{
+        document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+        chip.classList.add('active');
+        const filter = chip.dataset.filter;
+        [...grid.children].forEach(card=>{
+          card.style.display = (filter==="all" || card.dataset.category===filter) ? "flex":"none";
+        });
+      });
+    });
+
+    // Año dinámico
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
