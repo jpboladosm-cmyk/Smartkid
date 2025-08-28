@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicita un Tutor – SmartKid</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary:#2E7DFF; --primary-dark:#1f3c88; --muted:#6b7280;
+      --bg:#fff; --bg-alt:#f8f9fa; --border:#e5e7eb;
+    }
+    body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:#111827}
+    h1,h2{font-weight:800}
+    .container{max-width:950px;margin:0 auto;padding:0 20px}
+    header{background:#fff;padding:14px 0;border-bottom:1px solid var(--border)}
+    .hero{background:linear-gradient(135deg,#ffffff,#e9f0ff);padding:70px 0;text-align:center}
+    .hero h1{color:var(--primary-dark);font-size:40px;margin-bottom:16px}
+    .hero p{color:#374151;max-width:650px;margin:0 auto 20px;font-size:18px}
+    .hero-icon{font-size:58px;color:var(--primary);margin-bottom:16px;animation:bounce 3s infinite}
+    @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    .benefits{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:16px}
+    .benefit{background:#fff;border-radius:20px;padding:10px 18px;display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--primary-dark);box-shadow:0 3px 8px rgba(0,0,0,.08)}
+    .form-wrap{background:#fff;border-radius:14px;padding:40px;box-shadow:0 6px 20px rgba(0,0,0,.08);margin:40px auto}
+    form{display:grid;gap:20px}
+    label{font-weight:600;font-size:15px;margin-bottom:6px;display:block}
+    input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:8px;font-size:15px;font-family:inherit}
+    input:focus,select:focus,textarea:focus{outline:none;border-color:var(--primary)}
+    button{background:var(--primary);color:#fff;border:none;padding:14px 22px;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer}
+    button:hover{background:var(--primary-dark)}
+    .trust{margin-top:18px;font-size:14px;color:var(--muted)}
+
+    /* Mensaje de éxito */
+    .success-msg{
+      display:none;
+      margin-top:20px;
+      padding:14px;
+      background:#d1fae5;
+      border:1px solid #10b981;
+      border-radius:8px;
+      color:#065f46;
+      font-weight:600;
+    }
+
+    footer{background:#f1f1f1;padding:30px 0;margin-top:60px;text-align:center;font-size:13px;color:var(--muted)}
+    .whatsapp-float{position:fixed;bottom:20px;right:20px;background:var(--primary-dark);color:#fff;padding:12px 18px;border-radius:30px;display:flex;align-items:center;font-weight:600;gap:8px;text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,.25)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between">
+      <div style="font-weight:800;font-size:22px">SmartKid</div>
+      <a href="index.html" style="color:var(--primary-dark);text-decoration:none;font-weight:600">Volver al inicio</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-icon"><i class="fa fa-book-open"></i></div>
+      <h1>📚 Solicita tu tutor ahora</h1>
+      <p>Completa el formulario y en menos de 24 horas te contactaremos con opciones de tutores ideales para tu hijo/a.</p>
+      <div class="benefits">
+        <div class="benefit"><i class="fa fa-clock"></i> Respuesta en 24h</div>
+        <div class="benefit"><i class="fa fa-user-check"></i> Tutores verificados</div>
+        <div class="benefit"><i class="fa fa-ban"></i> Sin matrícula</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="form-wrap">
+      <form id="tutor-form">
+        <div>
+          <label for="nombre">Nombre del apoderado *</label>
+          <input type="text" id="nombre" required placeholder="Ej: Juan Pérez"/>
+        </div>
+        <div>
+          <label for="email">Correo electrónico *</label>
+          <input type="email" id="email" required placeholder="tuemail@ejemplo.com"/>
+        </div>
+        <div>
+          <label for="telefono">Teléfono / WhatsApp *</label>
+          <input type="text" id="telefono" required placeholder="+56 9 ...."/>
+        </div>
+        <div>
+          <label for="curso">Curso del estudiante</label>
+          <select id="curso">
+            <option>1° Básico</option><option>2° Básico</option><option>3° Básico</option>
+            <option>4° Básico</option><option>5° Básico</option><option>6° Básico</option>
+            <option>7° Básico</option><option>8° Básico</option>
+            <option>I Medio</option><option>II Medio</option><option>III Medio</option><option>IV Medio</option>
+          </select>
+        </div>
+        <div>
+          <label for="asignatura">Asignaturas a reforzar</label>
+          <input type="text" id="asignatura" placeholder="Ej: Matemáticas, Lenguaje, Ciencias"/>
+        </div>
+        <div>
+          <label for="clases">¿Cuántas clases a la semana?</label>
+          <select id="clases">
+            <option>1 clase por semana</option>
+            <option>2 clases por semana</option>
+            <option>3 clases por semana</option>
+            <option>Más de 3 clases por semana</option>
+          </select>
+        </div>
+        <div>
+          <label for="direccion">Dirección</label>
+          <input type="text" id="direccion" placeholder="Ej: Av. Las Condes 12345, Las Condes"/>
+        </div>
+        <div>
+          <label for="horarios">Días y horarios disponibles</label>
+          <input type="text" id="horarios" placeholder="Ej: Lunes y miércoles 17:00 - 18:00"/>
+        </div>
+        <div>
+          <label for="observaciones">Comentarios adicionales</label>
+          <textarea id="observaciones" rows="4" placeholder="Ej: Sistema IB, apoyo en inglés..."></textarea>
+        </div>
+        <button type="submit">Enviar solicitud</button>
+      </form>
+      <div id="success-msg" class="success-msg">✅ Tu solicitud fue enviada con éxito. Te contactaremos en menos de 24 horas.</div>
+      <p class="trust">Tu información es privada. Solo la utilizaremos para contactarte y asignar el mejor tutor.</p>
+    </div>
+  </div>
+
+  <footer>© <span id="year"></span> SmartKid SpA</footer>
+  <a href="https://wa.me/56965982941" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i> O contáctanos acá</a>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent=new Date().getFullYear();
+
+    // Simulación envío de formulario
+    document.getElementById('tutor-form').addEventListener('submit', function(e){
+      e.preventDefault(); // Evita refrescar la página
+      this.reset(); // Limpia formulario
+      document.getElementById('success-msg').style.display='block'; // Muestra mensaje
+    });
+  </script>
+</body>
+</html>
