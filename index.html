@@ -57,7 +57,16 @@
     .slider{position:relative;overflow:hidden}
     .slides{display:flex;transition:transform .5s ease}
     .slide{min-width:100%;box-sizing:border-box;padding:40px;text-align:center}
-    .slide blockquote{background:#fff;border-radius:18px;padding:30px;box-shadow:0 4px 16px rgba(0,0,0,.08);margin:0;font-style:italic;position:relative}
+    .slide blockquote{
+      background:#fff;
+      border-radius:18px;
+      padding:30px;
+      margin:0;
+      font-style:italic;
+      position:relative;
+      border:2px solid var(--primary);   /* 🔹 borde azul corporativo */
+      box-shadow:0 4px 16px rgba(0,0,0,.05);
+    }
     .slide blockquote:before{content:"\201C";position:absolute;top:-20px;left:20px;font-size:60px;color:var(--primary);opacity:0.15;font-weight:800}
     .slide cite{display:block;margin-top:16px;color:var(--muted);font-style:normal;font-weight:600}
     .controls{margin-top:20px;text-align:center}
@@ -140,6 +149,7 @@
   </div>
 </section>
 
+<!-- 🎯 TESTIMONIOS con borde azul -->
 <section id="testimonios" class="section testimonials">
   <div class="container">
     <h2>Lo que opinan nuestras familias</h2>
