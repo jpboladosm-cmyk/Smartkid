@@ -64,7 +64,7 @@
       margin:0;
       font-style:italic;
       position:relative;
-      border:2px solid #d6e4ff;   /* 🔹 borde azul claro suave */
+      border:2px solid #d6e4ff;   /* 🔹 borde azul claro */
       box-shadow:0 4px 16px rgba(0,0,0,.05);
     }
     .slide blockquote:before{content:"\201C";position:absolute;top:-20px;left:20px;font-size:60px;color:var(--primary);opacity:0.15;font-weight:800}
@@ -220,3 +220,103 @@
     </div>
   </div>
 </section>
+
+<section id="instagram" class="section">
+  <div class="container">
+   <h2>
+    <i class="fab fa-instagram" style="color:#E4405F; margin-right:8px;"></i>
+    <a href="https://www.instagram.com/smartkidcl" target="_blank" style="color:inherit; text-decoration:none;">
+      @smartkidcl
+    </a>
+   </h2>
+    <div class="insta-grid">
+      <a href="https://www.instagram.com/p/DNluK9KJ2KY/" target="_blank">
+        <img src="Imagenes/IMG-20250830-WA0025.jpg" alt="Cada logro cuenta" />
+      </a>
+      <a href="https://www.instagram.com/p/DL-aixuxu9M/" target="_blank">
+        <img src="Imagenes/IMG-20250830-WA0018.jpg" alt="Potenciamos su aprendizaje" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4>Cómo funciona</h4>
+      <ul>
+        <li><a href="como-funciona.html">Paso a paso</a></li>
+        <li><a href="como-funciona.html#faq">Preguntas Frecuentes</a></li>
+        <li><a href="como-funciona.html#precio">Precio</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Sobre nosotros</h4>
+      <ul>
+        <li><a href="sobre-nosotros.html">Quiénes somos</a></li>
+        <li><a href="sobre-nosotros.html#comunidad">Nuestra comunidad</a></li>
+        <li><a href="sobre-nosotros.html#seguridad">Confianza & Seguridad</a></li>
+        <li><a href="sobre-nosotros.html#estandares">Estándares de calidad</a></li>
+        <li><a href="sobre-nosotros.html#postula">Postula como tutor</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Blog</h4>
+      <ul>
+        <li><a href="blog.html">Consejos & Artículos</a></li>
+        <li><a href="blog.html">Blog educativo</a></li>
+        <li><a href="blog.html#partners">Partners / Auspiciadores</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <ul>
+        <li><a href="https://instagram.com/smartkidcl" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © <span id="year"></span> SmartKid SpA ·
+    <a href="politica-privacidad.html">Política de Privacidad</a> ·
+    <a href="terminos-condiciones.html">Términos y Condiciones</a>
+  </div>
+</footer>
+
+<a href="https://wa.me/56965982941" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i> Chatea con nosotros
+</a>
+
+<div id="cookie-banner" class="cookie-banner">
+  <p>Usamos cookies para funciones esenciales y analíticas. Al continuar, aceptas nuestra
+    <a href="politica-privacidad.html">Política de Privacidad</a>.
+  </p>
+  <div class="cookie-actions">
+    <button class="cookie-btn accept" id="accept-cookies">Aceptar</button>
+    <button class="cookie-btn" id="decline-cookies">Rechazar</button>
+  </div>
+</div>
+
+<script>
+  document.getElementById('year').textContent=new Date().getFullYear();
+  let index=0;const slides=document.getElementById('slides');const total=slides.children.length;
+  function moveSlide(step){index=(index+step+total)%total;slides.style.transform='translateX('+(-index*100)+'%)';}
+  setInterval(()=>{moveSlide(1)},5000);
+  window.moveSlide = moveSlide;
+
+  (function(){
+    const KEY='sk_cookie_consent_v1';
+    const saved=localStorage.getItem(KEY);
+    const banner=document.getElementById('cookie-banner');
+    if(!saved){banner.style.display='flex';}
+    document.getElementById('accept-cookies').addEventListener('click',()=>{
+      localStorage.setItem(KEY,'accepted');
+      banner.style.display='none';
+    });
+    document.getElementById('decline-cookies').addEventListener('click',()=>{
+      localStorage.setItem(KEY,'declined');
+      banner.style.display='none';
+    });
+  })();
+</script>
+</body>
+</html>
