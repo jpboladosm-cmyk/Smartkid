@@ -16,9 +16,7 @@
       --border:#e5e7eb;
     }
     
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     
     body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:#111827;line-height:1.6}
     h1,h2,h3{font-weight:800}
@@ -51,7 +49,7 @@
     .timeline::before{content:"";position:absolute;top:42px;left:0;width:100%;height:3px;background:var(--border);z-index:0}
     .step{flex:1;min-width:200px;text-align:center;position:relative;z-index:1;background:#fff;padding:20px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
     .step-circle{width:60px;height:60px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 16px;box-shadow:0 4px 12px rgba(46,125,255,.3);font-weight:800}
-    .step h3{margin:0 0 12px;color:var(--primary-dark);font-size:18px}
+    .step h3{margin:0 0 12px;color:#111;font-size:18px}   /* Negro */
     .step p{color:var(--muted);font-size:14px;line-height:1.5;margin:0}
 
     /* Precio */
@@ -67,8 +65,8 @@
     .trust-safety > p{color:var(--muted);font-size:18px;margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto}
     .trust-badges{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:40px}
     .badge{background:#fff;border:1px solid var(--border);border-radius:16px;padding:30px;box-shadow:0 4px 12px rgba(0,0,0,.06);text-align:center}
-    .badge i{font-size:32px;color:var(--primary);margin-bottom:16px}
-    .badge h4{margin:0 0 12px;color:var(--primary-dark);font-size:18px}
+    .badge i{font-size:32px;color:#111;margin-bottom:16px}   /* Negro */
+    .badge h4{margin:0 0 12px;color:#111;font-size:18px}     /* Negro */
     .badge p{color:var(--muted);font-size:14px;line-height:1.5;margin:0}
 
     /* Footer */
@@ -79,123 +77,23 @@
     .footer-col a{color:var(--muted);text-decoration:none}
     .footer-col a:hover{color:var(--primary-dark)}
     .footer-bottom{text-align:center;border-top:1px solid #ddd;padding-top:20px;font-size:13px}
-    .footer-bottom a{color:var(--primary);text-decoration:none;margin:0 8px}
-    .footer-bottom a:hover{text-decoration:underline}
+    .footer-bottom a{color:var(--muted);text-decoration:none}
+    .footer-bottom a:hover{color:#111;text-decoration:underline}
 
     /* WhatsApp float */
     .whatsapp-float{position:fixed;bottom:20px;right:20px;background:var(--primary-dark);color:#fff;padding:12px 20px;border-radius:30px;display:flex;align-items:center;font-weight:600;gap:8px;box-shadow:0 4px 10px rgba(0,0,0,.2);z-index:100;text-decoration:none}
     .whatsapp-float i{font-size:20px}
     .whatsapp-float:hover{background:#0f1f4a}
 
-    /* 📱 RESPONSIVE - TABLET (768px y menos) */
+    /* Responsive */
     @media (max-width: 768px) {
-      .container{padding:0 20px}
-      
-      /* Header más compacto */
-      header .nav{height:60px}
-      header .brand{font-size:20px}
-      header nav ul{gap:20px}
-      header nav a{font-size:14px}
-      .cta{padding:10px 16px;font-size:14px}
-      
-      /* Hero ajustado */
-      .hero{padding:60px 0}
       .hero-grid{grid-template-columns:1fr;text-align:center;gap:30px}
-      .hero h1{font-size:36px}
-      .hero p{font-size:16px;margin-bottom:24px}
-      .hero img{max-width:400px;margin:0 auto}
-      
-      /* Sections */
-      .section{padding:60px 0}
-      .section h2{font-size:28px;margin-bottom:30px}
-      
-      /* Timeline */
       .timeline{flex-direction:column;gap:20px}
       .timeline::before{display:none}
-      .step{min-width:auto;max-width:500px;margin:0 auto}
-      .step-circle{width:50px;height:50px;font-size:20px;margin-bottom:12px}
-      .step h3{font-size:16px}
-      .step p{font-size:13px}
-      
-      /* Precio */
-      .price-card{padding:30px;margin:30px auto}
-      .price-main{font-size:32px}
-      .price-list li{font-size:14px}
-      
-      /* Trust badges */
-      .trust-safety{padding:60px 0}
-      .trust-badges{grid-template-columns:repeat(2,1fr);gap:20px}
-      .badge{padding:24px}
-      .badge i{font-size:28px;margin-bottom:12px}
-      .badge h4{font-size:16px}
-      .badge p{font-size:13px}
-      
-      /* Footer */
-      .footer-grid{grid-template-columns:repeat(2,1fr);gap:30px}
+      .trust-badges{grid-template-columns:repeat(2,1fr)}
     }
-
-    /* 📱 RESPONSIVE - MOBILE (640px y menos) */
     @media (max-width: 640px) {
-      .container{padding:0 16px}
-      
-      /* Header mobile */
-      header .nav{height:56px;flex-wrap:wrap}
-      header .brand{font-size:18px}
-      header nav ul{gap:16px}
-      header nav a{font-size:13px}
-      .cta{padding:8px 14px;font-size:13px}
-      
-      /* Hero mobile */
-      .hero{padding:40px 0}
-      .hero h1{font-size:28px;line-height:1.3}
-      .hero p{font-size:15px;margin-bottom:20px}
-      .hero img{max-width:100%}
-      
-      /* Sections mobile */
-      .section{padding:40px 0}
-      .section h2{font-size:24px;margin-bottom:24px}
-      
-      /* Timeline mobile */
-      .timeline{gap:16px}
-      .step{padding:16px}
-      .step-circle{width:45px;height:45px;font-size:18px;margin-bottom:10px}
-      .step h3{font-size:15px;margin-bottom:8px}
-      .step p{font-size:12px}
-      
-      /* Precio mobile */
-      .price-card{padding:24px;margin:24px auto}
-      .price-main{font-size:28px;margin-bottom:16px}
-      .price-list{gap:10px;margin:20px 0}
-      .price-list li{font-size:13px;gap:10px}
-      .price-list i{font-size:14px}
-      
-      /* Trust badges mobile */
-      .trust-safety{padding:40px 0}
-      .trust-safety > p{font-size:16px;margin-bottom:30px}
-      .trust-badges{grid-template-columns:1fr;gap:16px}
-      .badge{padding:20px}
-      .badge i{font-size:24px;margin-bottom:10px}
-      .badge h4{font-size:15px;margin-bottom:8px}
-      .badge p{font-size:12px}
-      
-      /* Footer mobile */
-      .footer-grid{grid-template-columns:1fr;gap:24px}
-      .footer-col h4{font-size:14px}
-      .footer-col a{font-size:13px}
-      .footer-bottom{font-size:12px}
-      
-      /* WhatsApp button mobile */
-      .whatsapp-float{bottom:16px;right:16px;padding:10px 16px;font-size:14px}
-      .whatsapp-float i{font-size:18px}
-    }
-
-    /* 📱 RESPONSIVE - MOBILE PEQUEÑO (480px y menos) */
-    @media (max-width: 480px) {
-      .hero h1{font-size:24px}
-      .hero p{font-size:14px}
-      .section h2{font-size:22px}
-      .price-main{font-size:24px}
-      .trust-safety > p{font-size:15px}
+      .trust-badges{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -232,26 +130,10 @@
   <div class="container">
     <h2>El proceso SmartKid</h2>
     <div class="timeline">
-      <div class="step">
-        <div class="step-circle">1</div>
-        <h3>Completa el formulario</h3>
-        <p>Cuéntanos curso, asignaturas y horarios. Así escogemos la mejor opción.</p>
-      </div>
-      <div class="step">
-        <div class="step-circle">2</div>
-        <h3>Recibe perfiles</h3>
-        <p>Tutores universitarios verificados, con estudios y experiencia comprobada.</p>
-      </div>
-      <div class="step">
-        <div class="step-circle">3</div>
-        <h3>Coordina con tu tutor</h3>
-        <p>Define horarios, objetivos y plan de trabajo directamente.</p>
-      </div>
-      <div class="step">
-        <div class="step-circle">4</div>
-        <h3>Clases en tu casa</h3>
-        <p>Clases siempre a domicilio en Las Condes, Vitacura o Lo Barnechea. Pago mensual al final según horas.</p>
-      </div>
+      <div class="step"><div class="step-circle">1</div><h3>Completa el formulario</h3><p>Cuéntanos curso, asignaturas y horarios. Así escogemos la mejor opción.</p></div>
+      <div class="step"><div class="step-circle">2</div><h3>Recibe perfiles</h3><p>Tutores universitarios verificados, con estudios y experiencia comprobada.</p></div>
+      <div class="step"><div class="step-circle">3</div><h3>Coordina con tu tutor</h3><p>Define horarios, objetivos y plan de trabajo directamente.</p></div>
+      <div class="step"><div class="step-circle">4</div><h3>Clases en tu casa</h3><p>Clases siempre a domicilio en Las Condes, Vitacura o Lo Barnechea. Pago mensual al final según horas.</p></div>
     </div>
   </div>
 </section>
@@ -277,26 +159,10 @@
     <h2>Confianza y Seguridad</h2>
     <p>La tranquilidad de tu familia es lo más importante. Estos son nuestros pilares:</p>
     <div class="trust-badges">
-      <div class="badge">
-        <i class="fa fa-lock"></i>
-        <h4>Perfiles verificados</h4>
-        <p>Validamos identidad, estudios y referencias.</p>
-      </div>
-      <div class="badge">
-        <i class="fa fa-school"></i>
-        <h4>Universidades prestigiosas</h4>
-        <p>Tutores de carreras destacadas.</p>
-      </div>
-      <div class="badge">
-        <i class="fa fa-language"></i>
-        <h4>Inglés e IB</h4>
-        <p>Clases en inglés y preparación IB.</p>
-      </div>
-      <div class="badge">
-        <i class="fa fa-map-marker-alt"></i>
-        <h4>En tu comuna</h4>
-        <p>Exclusivamente Las Condes, Vitacura y Lo Barnechea.</p>
-      </div>
+      <div class="badge"><i class="fa fa-lock"></i><h4>Perfiles verificados</h4><p>Validamos identidad, estudios y referencias.</p></div>
+      <div class="badge"><i class="fa fa-school"></i><h4>Universidades prestigiosas</h4><p>Tutores de carreras destacadas.</p></div>
+      <div class="badge"><i class="fa fa-language"></i><h4>Inglés e IB</h4><p>Clases en inglés y preparación IB.</p></div>
+      <div class="badge"><i class="fa fa-map-marker-alt"></i><h4>En tu comuna</h4><p>Exclusivamente Las Condes, Vitacura y Lo Barnechea.</p></div>
     </div>
   </div>
 </section>
