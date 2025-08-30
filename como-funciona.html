@@ -1,4 +1,3 @@
-<!-- como-funciona.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,46 +8,68 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primary:#2E7DFF; --primary-dark:#1f3c88;
-      --muted:#6b7280; --bg:#fff; --bg-alt:#f8f9fa; --border:#e5e7eb;
+      --primary:#2E7DFF;
+      --primary-dark:#1f3c88;
+      --muted:#6b7280;
+      --bg:#fff;
+      --bg-alt:#f8f9fa;
+      --border:#e5e7eb;
     }
-    body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:#111827}
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:#111827;line-height:1.6}
     h1,h2,h3{font-weight:800}
     .container{max-width:1150px;margin:0 auto;padding:0 24px}
+
+    /* Header */
     header{background:#fff;position:sticky;top:0;z-index:50;border-bottom:1px solid var(--border)}
     header .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+    header .brand{font-weight:800;font-size:22px;color:#111827;text-decoration:none}
     header nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
     header nav a{color:var(--muted);font-weight:600;text-decoration:none}
-    header nav a:hover, header nav a.active{color:#111}
-    .cta{background:var(--primary);color:#fff;padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none}
+    header nav a:hover{color:#111}
+    header nav a.active{color:#111}
+    .cta{background:var(--primary);color:#fff;padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;display:inline-block}
     .cta:hover{background:var(--primary-dark)}
 
     /* Hero con imagen */
-    .hero{background:linear-gradient(135deg,#ffffff,#f1f5ff);padding:60px 0}
-    .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center}
-    .hero h1{color:var(--primary-dark);font-size:44px;margin:0 0 12px}
-    .hero p{color:#374151;font-size:18px;line-height:1.6;margin:0 0 20px;max-width:620px}
-    .hero img{width:100%;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+    .hero{background:linear-gradient(135deg,#ffffff,#f1f5ff);padding:80px 0}
+    .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+    .hero h1{color:var(--primary-dark);font-size:46px;margin:0 0 16px;line-height:1.2}
+    .hero p{color:#374151;font-size:18px;line-height:1.6;margin:0 0 28px;max-width:620px}
+    .hero img{width:100%;max-width:500px;height:auto;border-radius:24px;box-shadow:0 8px 24px rgba(0,0,0,.08);object-fit:cover}
+
+    /* Sections */
+    .section{padding:80px 0}
+    .section h2{text-align:center;color:var(--primary-dark);margin-bottom:40px;font-size:36px}
 
     /* Timeline */
-    .section{padding:60px 0}
-    .timeline{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px;margin-top:40px;position:relative}
+    .timeline{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:30px;margin-top:40px;position:relative}
     .timeline::before{content:"";position:absolute;top:42px;left:0;width:100%;height:3px;background:var(--border);z-index:0}
-    .step{flex:1;min-width:200px;text-align:center;position:relative;z-index:1}
-    .step-circle{width:60px;height:60px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 12px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
-    .step h3{margin:6px 0;color:var(--primary-dark)}
+    .step{flex:1;min-width:200px;text-align:center;position:relative;z-index:1;background:#fff;padding:20px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+    .step-circle{width:60px;height:60px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 16px;box-shadow:0 4px 12px rgba(46,125,255,.3);font-weight:800}
+    .step h3{margin:0 0 12px;color:var(--primary-dark);font-size:18px}
+    .step p{color:var(--muted);font-size:14px;line-height:1.5;margin:0}
 
     /* Precio */
     .price-card{background:linear-gradient(135deg,#f0f6ff,#ffffff);border:2px solid var(--primary);border-radius:20px;padding:40px;max-width:650px;margin:40px auto;box-shadow:0 8px 24px rgba(0,0,0,.08);text-align:center}
-    .price-main{font-size:36px;font-weight:800;color:var(--primary-dark)}
-    .price-list{list-style:none;padding:0;margin:22px 0;text-align:left;display:grid;gap:12px}
-    .price-list li{display:flex;align-items:flex-start;gap:10px}
-    .price-list i{color:#10b981;margin-top:3px}
+    .price-main{font-size:42px;font-weight:800;color:var(--primary-dark);margin-bottom:20px}
+    .price-list{list-style:none;padding:0;margin:24px 0;text-align:left;display:grid;gap:12px}
+    .price-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.5}
+    .price-list i{color:#10b981;margin-top:3px;font-size:16px}
 
     /* Trust badges */
-    .trust-safety{background:var(--bg-alt);padding:60px 0;text-align:center}
-    .trust-badges{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-top:30px}
-    .badge{background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+    .trust-safety{background:var(--bg-alt);padding:80px 0;text-align:center}
+    .trust-safety h2{color:var(--primary-dark);margin-bottom:16px}
+    .trust-safety > p{color:var(--muted);font-size:18px;margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto}
+    .trust-badges{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:40px}
+    .badge{background:#fff;border:1px solid var(--border);border-radius:16px;padding:30px;box-shadow:0 4px 12px rgba(0,0,0,.06);text-align:center}
+    .badge i{font-size:32px;color:var(--primary);margin-bottom:16px}
+    .badge h4{margin:0 0 12px;color:var(--primary-dark);font-size:18px}
+    .badge p{color:var(--muted);font-size:14px;line-height:1.5;margin:0}
 
     /* Footer */
     footer{background:#f1f1f1;padding:50px 0 20px;margin-top:40px;font-size:14px;color:var(--muted)}
@@ -64,12 +85,124 @@
     /* WhatsApp float */
     .whatsapp-float{position:fixed;bottom:20px;right:20px;background:var(--primary-dark);color:#fff;padding:12px 20px;border-radius:30px;display:flex;align-items:center;font-weight:600;gap:8px;box-shadow:0 4px 10px rgba(0,0,0,.2);z-index:100;text-decoration:none}
     .whatsapp-float i{font-size:20px}
+    .whatsapp-float:hover{background:#0f1f4a}
+
+    /* 📱 RESPONSIVE - TABLET (768px y menos) */
+    @media (max-width: 768px) {
+      .container{padding:0 20px}
+      
+      /* Header más compacto */
+      header .nav{height:60px}
+      header .brand{font-size:20px}
+      header nav ul{gap:20px}
+      header nav a{font-size:14px}
+      .cta{padding:10px 16px;font-size:14px}
+      
+      /* Hero ajustado */
+      .hero{padding:60px 0}
+      .hero-grid{grid-template-columns:1fr;text-align:center;gap:30px}
+      .hero h1{font-size:36px}
+      .hero p{font-size:16px;margin-bottom:24px}
+      .hero img{max-width:400px;margin:0 auto}
+      
+      /* Sections */
+      .section{padding:60px 0}
+      .section h2{font-size:28px;margin-bottom:30px}
+      
+      /* Timeline */
+      .timeline{flex-direction:column;gap:20px}
+      .timeline::before{display:none}
+      .step{min-width:auto;max-width:500px;margin:0 auto}
+      .step-circle{width:50px;height:50px;font-size:20px;margin-bottom:12px}
+      .step h3{font-size:16px}
+      .step p{font-size:13px}
+      
+      /* Precio */
+      .price-card{padding:30px;margin:30px auto}
+      .price-main{font-size:32px}
+      .price-list li{font-size:14px}
+      
+      /* Trust badges */
+      .trust-safety{padding:60px 0}
+      .trust-badges{grid-template-columns:repeat(2,1fr);gap:20px}
+      .badge{padding:24px}
+      .badge i{font-size:28px;margin-bottom:12px}
+      .badge h4{font-size:16px}
+      .badge p{font-size:13px}
+      
+      /* Footer */
+      .footer-grid{grid-template-columns:repeat(2,1fr);gap:30px}
+    }
+
+    /* 📱 RESPONSIVE - MOBILE (640px y menos) */
+    @media (max-width: 640px) {
+      .container{padding:0 16px}
+      
+      /* Header mobile */
+      header .nav{height:56px;flex-wrap:wrap}
+      header .brand{font-size:18px}
+      header nav ul{gap:16px}
+      header nav a{font-size:13px}
+      .cta{padding:8px 14px;font-size:13px}
+      
+      /* Hero mobile */
+      .hero{padding:40px 0}
+      .hero h1{font-size:28px;line-height:1.3}
+      .hero p{font-size:15px;margin-bottom:20px}
+      .hero img{max-width:100%}
+      
+      /* Sections mobile */
+      .section{padding:40px 0}
+      .section h2{font-size:24px;margin-bottom:24px}
+      
+      /* Timeline mobile */
+      .timeline{gap:16px}
+      .step{padding:16px}
+      .step-circle{width:45px;height:45px;font-size:18px;margin-bottom:10px}
+      .step h3{font-size:15px;margin-bottom:8px}
+      .step p{font-size:12px}
+      
+      /* Precio mobile */
+      .price-card{padding:24px;margin:24px auto}
+      .price-main{font-size:28px;margin-bottom:16px}
+      .price-list{gap:10px;margin:20px 0}
+      .price-list li{font-size:13px;gap:10px}
+      .price-list i{font-size:14px}
+      
+      /* Trust badges mobile */
+      .trust-safety{padding:40px 0}
+      .trust-safety > p{font-size:16px;margin-bottom:30px}
+      .trust-badges{grid-template-columns:1fr;gap:16px}
+      .badge{padding:20px}
+      .badge i{font-size:24px;margin-bottom:10px}
+      .badge h4{font-size:15px;margin-bottom:8px}
+      .badge p{font-size:12px}
+      
+      /* Footer mobile */
+      .footer-grid{grid-template-columns:1fr;gap:24px}
+      .footer-col h4{font-size:14px}
+      .footer-col a{font-size:13px}
+      .footer-bottom{font-size:12px}
+      
+      /* WhatsApp button mobile */
+      .whatsapp-float{bottom:16px;right:16px;padding:10px 16px;font-size:14px}
+      .whatsapp-float i{font-size:18px}
+    }
+
+    /* 📱 RESPONSIVE - MOBILE PEQUEÑO (480px y menos) */
+    @media (max-width: 480px) {
+      .hero h1{font-size:24px}
+      .hero p{font-size:14px}
+      .section h2{font-size:22px}
+      .price-main{font-size:24px}
+      .trust-safety > p{font-size:15px}
+    }
   </style>
 </head>
 <body>
 <header>
   <div class="container nav">
-    <div style="font-weight:800;font-size:22px">SmartKid</div>
+    <a href="index.html" class="brand">SmartKid</a>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -97,19 +230,35 @@
 
 <section class="section" id="paso-a-paso">
   <div class="container">
-    <h2 style="text-align:center;color:var(--primary-dark)">El proceso SmartKid</h2>
+    <h2>El proceso SmartKid</h2>
     <div class="timeline">
-      <div class="step"><div class="step-circle">1</div><h3>Completa el formulario</h3><p>Cuéntanos curso, asignaturas y horarios. Así escogemos la mejor opción.</p></div>
-      <div class="step"><div class="step-circle">2</div><h3>Recibe perfiles</h3><p>Tutores universitarios verificados, con estudios y experiencia comprobada.</p></div>
-      <div class="step"><div class="step-circle">3</div><h3>Coordina con tu tutor</h3><p>Define horarios, objetivos y plan de trabajo directamente.</p></div>
-      <div class="step"><div class="step-circle">4</div><h3>Clases en tu casa</h3><p>Clases siempre a domicilio en Las Condes, Vitacura o Lo Barnechea. Pago mensual al final según horas.</p></div>
+      <div class="step">
+        <div class="step-circle">1</div>
+        <h3>Completa el formulario</h3>
+        <p>Cuéntanos curso, asignaturas y horarios. Así escogemos la mejor opción.</p>
+      </div>
+      <div class="step">
+        <div class="step-circle">2</div>
+        <h3>Recibe perfiles</h3>
+        <p>Tutores universitarios verificados, con estudios y experiencia comprobada.</p>
+      </div>
+      <div class="step">
+        <div class="step-circle">3</div>
+        <h3>Coordina con tu tutor</h3>
+        <p>Define horarios, objetivos y plan de trabajo directamente.</p>
+      </div>
+      <div class="step">
+        <div class="step-circle">4</div>
+        <h3>Clases en tu casa</h3>
+        <p>Clases siempre a domicilio en Las Condes, Vitacura o Lo Barnechea. Pago mensual al final según horas.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section" id="precio">
   <div class="container">
-    <h2 style="text-align:center;color:var(--primary-dark)">Precio transparente</h2>
+    <h2>Precio transparente</h2>
     <div class="price-card">
       <div class="price-main">CLP $23.000 / hora</div>
       <ul class="price-list">
@@ -128,10 +277,26 @@
     <h2>Confianza y Seguridad</h2>
     <p>La tranquilidad de tu familia es lo más importante. Estos son nuestros pilares:</p>
     <div class="trust-badges">
-      <div class="badge"><i class="fa fa-lock"></i><h4>Perfiles verificados</h4><p>Validamos identidad, estudios y referencias.</p></div>
-      <div class="badge"><i class="fa fa-school"></i><h4>Universidades prestigiosas</h4><p>Tutores de carreras destacadas.</p></div>
-      <div class="badge"><i class="fa fa-language"></i><h4>Inglés e IB</h4><p>Clases en inglés y preparación IB.</p></div>
-      <div class="badge"><i class="fa fa-map-marker-alt"></i><h4>En tu comuna</h4><p>Exclusivamente Las Condes, Vitacura y Lo Barnechea.</p></div>
+      <div class="badge">
+        <i class="fa fa-lock"></i>
+        <h4>Perfiles verificados</h4>
+        <p>Validamos identidad, estudios y referencias.</p>
+      </div>
+      <div class="badge">
+        <i class="fa fa-school"></i>
+        <h4>Universidades prestigiosas</h4>
+        <p>Tutores de carreras destacadas.</p>
+      </div>
+      <div class="badge">
+        <i class="fa fa-language"></i>
+        <h4>Inglés e IB</h4>
+        <p>Clases en inglés y preparación IB.</p>
+      </div>
+      <div class="badge">
+        <i class="fa fa-map-marker-alt"></i>
+        <h4>En tu comuna</h4>
+        <p>Exclusivamente Las Condes, Vitacura y Lo Barnechea.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -175,8 +340,9 @@
   </div>
 </footer>
 
-<!-- Botón flotante WhatsApp -->
-<a href="https://wa.me/56965982941" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i> Chatea con nosotros</a>
+<a href="https://wa.me/56965982941" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i> Chatea con nosotros
+</a>
 
 <script>
   document.getElementById('year').textContent=new Date().getFullYear();
